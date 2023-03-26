@@ -2,6 +2,11 @@
 
 Mix of starter theme, dracula colors and my own ideas.
 
+Theme includes sidebar and syntax highlighting.
+
+
+![](assets/screenshot-desktop.png)
+
 ## Sidebar
 This theme includes sidebar with Author info, Last posts and Tags cloud. 
 
