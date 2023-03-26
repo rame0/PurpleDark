@@ -5,9 +5,20 @@ import "../css/index.css";
 
 // Import JS
 import menuOpen from "./menuOpen";
-import infiniteScroll from "./infiniteScroll";
+import hljs from "highlight.js/lib/common";
+import 'highlight.js/styles/base16/dracula.css';
+
+// import infiniteScroll from "./infiniteScroll";
 
 
 // Call the menu and infinite scroll functions
 menuOpen();
-infiniteScroll();
+// infiniteScroll();
+
+// Highlight.js
+hljs.initHighlightingOnLoad();
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     document.querySelectorAll('pre code').forEach((el) => {
+//         hljs.highlightElement(el);
+//     });
+// });

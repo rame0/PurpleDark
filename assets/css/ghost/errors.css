@@ -9,6 +9,10 @@
     padding-bottom: 2vmin;
 }
 
+.gh-error p {
+    text-align: center;
+}
+
 .gh-error-content {
     flex: 1 0 auto;
     text-align: center;
@@ -27,6 +31,7 @@
     line-height: 1.2em;
     font-weight: 300;
     opacity: 0.6;
+    text-align: center;
 }
 
 .gh-error-link {

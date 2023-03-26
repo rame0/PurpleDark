@@ -1,41 +1,11 @@
-# Ghost Starter Theme
+# RAMe0 dark Ghost theme
 
-A starter framework for Ghost themes! Click **Use this template** to create a copy of this repo for everything you need to get started developing a custom Ghost theme.
+Mix of starter theme, dracula colors and my own ideas.
 
-&nbsp;
+## Sidebar
+This theme includes sidebar with Author info, Last posts and Tags cloud. 
 
-## First time using a Ghost theme?
-
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
-
-We've documented this starter theme pretty heavily so that it should be possible to work out what's going on just by reading the code and the comments. We also have a robust set of resources to help you build awesome custom themes:
-
-- The official [theme documentation](https://ghost.org/docs/themes) is the complete resource for everything you need to know about Ghost theme development
-- [Tutorials](https://ghost.org/tutorials/) offer a step-by-step guide to building the most common features in Ghost themes
-- The [Ghost VS Code extension](https://marketplace.visualstudio.com/items?itemName=TryGhost.ghost) speeds up theme development and provides quick access to helpful info
-- All of Ghost's official themes are [open source](https://github.com/tryghost) and are a great reference for learning how to create a theme
-
-&nbsp;
-
-## Starter theme features
-
-🔁&nbsp;Livereload by default. See changes instantly in the browser whenever you save a file.
-
-🔎&nbsp;Optimized for VS Code. Find the files you're looking for more easily.
-
-🗃️&nbsp;Write modern JavaScript. Use ESM out of the box to write more manageable Javascript.
-
-🗜️&nbsp;Assets optimized automatically. JavaScript and CSS are minified and transpiled by default.
-
-👟&nbsp;Fast compile times, powered by [Rollup](https://rollupjs.org).
-
-🦋&nbsp;Write next-gen CSS for today's browsers with [PostCSS](https://postcss.org/). Add the CSS tools you love via [`rollup.config.js`](rollup.config.js).
-
-🚢&nbsp;Ghost's [GH Deploy Action](.github/workflows/deploy-theme.yml) included by default. [Learn more how to deploy your theme automatically](https://github.com/TryGhost/action-deploy-theme)
-
-➕&nbsp;Extensible by design. Rollup's configuration structure makes it easy to add [any number of plugins easily](https://github.com/rollup/plugins). 
-
-&nbsp;
+Some stuff there is hardcoded, but you can change it in `partials/sidebar.hbs`.
 
 ## Theme structure
 
@@ -121,5 +91,7 @@ npm run test
 
 
 ## Copyright & License
+
+Copyright (c) 2023 RAMe0- Released under the [MIT license](LICENSE).
 
 Copyright (c) 2013-2023 Ghost Foundation - Released under the [MIT license](LICENSE).

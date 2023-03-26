@@ -2,10 +2,33 @@
 /* ---------------------------------------------------------- */
 
 .gh-head {
-    padding: 3vmin 4vmin;
+    padding: 0 4vmin;
     font-size: 1.6rem;
     line-height: 1.3em;
     background: inherit;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(50px);
+}
+
+.gh-head-actions a:not(.gh-button) {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.gh-head-actions a svg {
+    height: 1.8rem;
+    fill: currentcolor;
+}
+
+.gh-head-actions a:first-child svg {
+    margin-left: 20px;
+}
+
+.gh-head-actions a:last-child svg {
+    height: 2rem;
 }
 
 .gh-head a {

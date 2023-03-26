@@ -1,0 +1,55 @@
+<aside class="gh-sidebar">
+    <section class="author widget">
+        <div class="avatar">
+            <a href="http://rame0.tests/author/rame0/" class="thumb">
+                <span class="image"
+                      style="background-image: url('https://secure.gravatar.com/avatar/912e7b74032921417ffd09c89cd6f7b7?s=512&r=g')"></span>
+            </a>
+        </div>
+        <div class="info">
+            <h4 class="title small author-name gradient-effect no-margin">
+                <a href="https://www.rame0.ru/author/rame0/">RAMe0</a>
+            </h4>
+            <p class="founder"></p>
+
+            <div class="social">
+                <a href="https://www.rame0.ru" target="_blank" rel="nofollow noopener"
+                   title="Сайт: https://www.rame0.ru">
+                    {{> "icons/globe"}}
+                </a>
+                <a href="https://twitter.com/rame0ru" target="_blank"
+                   rel="nofollow noopener" title="Подписывайтесь в Twitter">
+                    {{> "icons/twitter"}}
+                </a>
+
+                <a href="https://t.me/rame0ru" target="_blank"
+                   rel="nofollow noopener" title="Подписывайтесь в Twitter">
+                    {{> "icons/telegram"}}
+                </a>
+            </div>
+        </div>
+        <p>Freelancer, PHP-developer and more</p>
+    </section>
+
+    <section class="latest widget">
+        <h4>Свежие записи</h4>
+        {{#get "posts" limit="5" order="published_at DESC" as |short_posts|}}
+            {{#foreach short_posts}}
+                {{> "card-short"}}
+            {{/foreach}}
+        {{/get}}
+    </section>
+
+    {{! Get all tags and order them by post count }}
+
+    <section class="tags widget">
+        <h4>Теги</h4>
+        <div class="tag-cloud">
+            {{#get "tags" limit="15" include="count.posts" order="count.posts desc"}}
+                {{#foreach tags}}
+                    <a href="{{url}}">{{name}} ({{count.posts}})</a>
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </section>
+</aside>

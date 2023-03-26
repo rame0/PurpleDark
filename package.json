@@ -1,6 +1,6 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A starter theme for Ghost theme development",
+    "name": "rame0-dark-theme",
+    "description": "Dark purple theme for Ghost. With some dracula colors.",
     "demo": "https://starter.ghost.io",
     "version": "2.0.0",
     "engines": {
@@ -8,7 +8,7 @@
     },
     "license": "MIT",
     "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg"
+        "desktop": "assets/screenshot-desktop.png"
     },
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
@@ -18,15 +18,15 @@
         "pretest": "npm run build"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Ramil Aliyakberov a.k.a. RAMe0",
+        "email": "me@rame0.ru",
+        "url": "https://www.rame0.ru"
     },
     "gpm": {
         "type": "theme",
         "categories": [
-            "Minimal",
-            "Magazine"
+            "Dark",
+            "Blog"
         ]
     },
     "keywords": [
@@ -39,7 +39,17 @@
         "url": "https://github.com/TryGhost/Starter.git"
     },
     "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
+    "contributors": [
+        {
+            "name": "Ghost Foundation",
+            "url": "https://github.com/TryGhost/Starter/graphs/contributors"
+        },
+        {
+            "name": "Ramil Aliyakberov a.k.a. RAMe0",
+            "url": "https://www.rame0.ru",
+            "email": "me@rame0.ru"
+        }
+    ],
     "devDependencies": {
         "@babel/core": "^7.21.0",
         "@babel/preset-env": "^7.20.2",
@@ -49,6 +59,8 @@
         "@rollup/plugin-terser": "^0.4.0",
         "bestzip": "^2.2.1",
         "gscan": "^4.36.1",
+        "highlight.js": "^11.7.0",
+        "postcss": "^8.4.21",
         "postcss-import": "^15.1.0",
         "postcss-preset-env": "^8.0.1",
         "rollup": "^3.18.0",
@@ -79,6 +91,17 @@
             },
             "xl": {
                 "width": 2000
+            }
+        },
+        "custom": {
+            "layout": {
+                "type": "select",
+                "options": [
+                    "Full-width",
+                    "1220px",
+                    "960px"
+                ],
+                "default": "1220px"
             }
         }
     },
