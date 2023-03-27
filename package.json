@@ -1,8 +1,7 @@
 {
     "name": "rame0-dark-theme",
     "description": "Dark purple theme for Ghost. With some dracula colors.",
-    "demo": "https://starter.ghost.io",
-    "version": "2.0.0",
+    "version": "0.2.0",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -36,9 +35,9 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/rame0/ghost-dark-theme.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
+    "bugs": "https://github.com/rame0/ghost-dark-theme/issues",
     "contributors": [
         {
             "name": "Ghost Foundation",
