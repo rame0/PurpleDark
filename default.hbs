@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+{{#match @custom.font "monospace"}}<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">{{/match}}
+{{#match @custom.font "sans-serif"}}<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">{{/match}}
+{{#match @custom.font "serif"}}<link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;700&display=swap" rel="stylesheet">{{/match}}
+
     <link rel="stylesheet" href="{{asset "built/index.css"}}"/>
     <script src="{{asset "built/index.js"}}" defer></script>
 
@@ -17,8 +20,9 @@
 
     <style>
         :root {
-            {{#match @custom.typography "Elegant serif"}}--font-name: "Elegant serif";{{/match}}
-            {{#match @custom.typography "Modern sans-serif"}}--font-name: "Modern sans-serif";{{/match}}
+            {{#match @custom.font "monospace"}}--font: var(--font-mono);{{/match}}
+            {{#match @custom.font "sans-serif"}}--font: var(--font-sans-serif);{{/match}}
+            {{#match @custom.font "serif"}}--font: var(--font-serif);{{/match}}
 
             {{#match @custom.layout "Full-width"}}--container-width: 100%;{{/match}}
             {{#match @custom.layout "1220px"}}--container-width: 1220px;{{/match}}

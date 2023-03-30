@@ -93,6 +93,15 @@
             }
         },
         "custom": {
+            "font": {
+                "type": "select",
+                "options": [
+                    "Monospace",
+                    "Serif",
+                    "Sans-serif"
+                ],
+                "default": "monospace"
+            },
             "layout": {
                 "type": "select",
                 "options": [
