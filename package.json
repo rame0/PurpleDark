@@ -100,7 +100,7 @@
                     "Serif",
                     "Sans-serif"
                 ],
-                "default": "monospace"
+                "default": "Monospace"
             },
             "layout": {
                 "type": "select",
