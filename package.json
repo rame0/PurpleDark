@@ -1,5 +1,5 @@
 {
-    "name": "rame0-dark-theme",
+    "name": "purple-dark",
     "description": "Dark purple theme for Ghost. With some dracula colors.",
     "version": "0.2.0",
     "engines": {
@@ -12,9 +12,9 @@
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
         "build": "rollup -c --environment BUILD:production",
-        "zip": "npm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
+        "zip": "pnpm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
         "test": "gscan .",
-        "pretest": "npm run build"
+        "pretest": "pnpm run build"
     },
     "author": {
         "name": "Ramil Aliyakberov a.k.a. RAMe0",
