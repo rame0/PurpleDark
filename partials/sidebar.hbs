@@ -1,36 +1,44 @@
 <aside class="gh-sidebar">
-    <section class="author widget">
-        <div class="avatar">
-            <a href="http://rame0.tests/author/rame0/" class="thumb">
+    {{#get "authors" limit=1 }}
+        {{#foreach authors}}
+
+            <section class="author widget">
+                <div class="avatar">
+                    <a href="{{url}}" class="thumb">
                 <span class="image"
-                      style="background-image: url('https://secure.gravatar.com/avatar/912e7b74032921417ffd09c89cd6f7b7?s=512&r=g')"></span>
-            </a>
-        </div>
-        <div class="info">
-            <h4 class="title small author-name gradient-effect no-margin">
-                <a href="https://www.rame0.ru/author/rame0/">RAMe0</a>
-            </h4>
-            <p class="founder"></p>
+                      style="background-image: url('{{profile_image}}')"></span>
+                    </a>
+                </div>
+                <div class="info">
+                    <h4 class="title small author-name gradient-effect no-margin">
+                        <a href="{{url}}">{{name}}</a>
+                    </h4>
 
-            <div class="social">
-                <a href="https://www.rame0.ru" target="_blank" rel="nofollow noopener"
-                   title="Сайт: https://www.rame0.ru">
-                    {{> "icons/globe"}}
-                </a>
-                <a href="https://twitter.com/rame0ru" target="_blank"
-                   rel="nofollow noopener" title="Подписывайтесь в Twitter">
-                    {{> "icons/twitter"}}
-                </a>
+                    <p class="founder"></p>
 
-                <a href="https://t.me/rame0ru" target="_blank"
-                   rel="nofollow noopener" title="Подписывайтесь в Twitter">
-                    {{> "icons/telegram"}}
-                </a>
-            </div>
-        </div>
-        <p>Freelancer, PHP-developer and more</p>
-    </section>
-
+                    <div class="social">
+                        {{#if website}}
+                            <a href="{{website}}" target="_blank" rel="nofollow noopener"
+                               title="Сайт: {{website}}">
+                                {{> "icons/globe"}}
+                            </a>
+                        {{/if}}
+                        {{#if twitter}}
+                            <a href="https://twitter.com/{{twitter}}" target="_blank"
+                               rel="nofollow noopener" title="Подписывайтесь в Twitter">
+                                {{> "icons/twitter"}}
+                            </a>
+                        {{/if}}
+                        <a href="https://t.me/rame0ru" target="_blank"
+                           rel="nofollow noopener" title="Подписывайтесь в Twitter">
+                            {{> "icons/telegram"}}
+                        </a>
+                    </div>
+                </div>
+                <p>{{bio}}</p>
+            </section>
+        {{/foreach}}
+    {{/get}}
     <section class="latest widget">
         <h4>Свежие записи</h4>
         {{#get "posts" limit="5" order="published_at DESC" as |short_posts|}}
