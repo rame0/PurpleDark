@@ -19,18 +19,18 @@
                     <div class="social">
                         {{#if website}}
                             <a href="{{website}}" target="_blank" rel="nofollow noopener"
-                               title="Сайт: {{website}}">
+                               title="{{t "Website"}}: {{website}}">
                                 {{> "icons/globe"}}
                             </a>
                         {{/if}}
                         {{#if twitter}}
                             <a href="https://twitter.com/{{twitter}}" target="_blank"
-                               rel="nofollow noopener" title="Подписывайтесь в Twitter">
+                               rel="nofollow noopener" title="{{t "Subscribe in"}} Twitter">
                                 {{> "icons/twitter"}}
                             </a>
                         {{/if}}
                         <a href="https://t.me/rame0ru" target="_blank"
-                           rel="nofollow noopener" title="Подписывайтесь в Twitter">
+                           rel="nofollow noopener" title="{{t "Contact via"}} Telegram">
                             {{> "icons/telegram"}}
                         </a>
                     </div>
@@ -40,7 +40,7 @@
         {{/foreach}}
     {{/get}}
     <section class="latest widget">
-        <h4>Свежие записи</h4>
+        <h4>{{t "Latest posts"}}</h4>
         {{#get "posts" limit="5" order="published_at DESC" as |short_posts|}}
             {{#foreach short_posts}}
                 {{> "card-short"}}
@@ -51,7 +51,7 @@
     {{! Get all tags and order them by post count }}
 
     <section class="tags widget">
-        <h4>Теги</h4>
+        <h4>{{t "Tags"}}</h4>
         <div class="tag-cloud">
             {{#get "tags" limit="15" include="count.posts" order="count.posts desc"}}
                 {{#foreach tags}}

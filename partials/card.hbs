@@ -17,18 +17,18 @@ Re-usable card for linking to posts
             <h2 class="gh-card-title">{{title}}</h2>
             <span class="gh-card-meta">
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
-                <span class="bull">&bull;</span> {{reading_time}}
+                <span class="bull">&bull;</span> {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
             </span>
         </a>
     {{/if}}
 
     <div class="gh-card-content">
         {{#unless feature_image}}
-        <a href="{{url}}">
+        <a href="{{url}}" class="gh-card-title">
             <h2 class="gh-card-title">{{title}}</h2>
             <span class="gh-card-meta">
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
-                <span class="bull">&bull;</span> {{reading_time}}
+                <span class="bull">&bull;</span> {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
             </span>
         </a>
         {{/unless}}
