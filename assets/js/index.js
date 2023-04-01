@@ -5,8 +5,8 @@ import "../css/index.css";
 
 // Import JS
 import menuOpen from "./menuOpen";
-import hljs from "highlight.js/lib/common";
-import 'highlight.js/styles/base16/dracula.css';
+import initHighlight from "./Highlight.js";
+
 
 // import infiniteScroll from "./infiniteScroll";
 
@@ -16,9 +16,4 @@ menuOpen();
 // infiniteScroll();
 
 // Highlight.js
-hljs.initHighlightingOnLoad();
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     document.querySelectorAll('pre code').forEach((el) => {
-//         hljs.highlightElement(el);
-//     });
-// });
+initHighlight();
