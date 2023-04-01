@@ -12,7 +12,7 @@
     "scripts": {
         "dev": "rollup -c --environment BUILD:development -w",
         "build": "rollup -c --environment BUILD:production",
-        "zip": "pnpm run build && bestzip $npm_package_name.zip assets/* partials/* members/* locales/* *.hbs package.json",
+        "zip": "pnpm run build && bestzip PurpleDark.zip assets/* partials/* members/* locales/* *.hbs package.json",
         "test": "gscan .",
         "pretest": "pnpm run build"
     },
