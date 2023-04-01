@@ -137,7 +137,7 @@ a[class] {
     transition: 0.4s ease;
 }
 
-a:hover {
+a:hover, a:hover h1, a:hover h2, a:hover h3 {
     text-decoration: underline;
     transition: 0.2s ease;
     color: var(--yellow);

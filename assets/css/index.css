@@ -41,7 +41,7 @@ body {
     background-size: contain;
 }
 
-.gh-no-grid{
+.gh-no-grid {
     grid: none;
 }
 
@@ -88,7 +88,6 @@ body {
     border-radius: 15px;
     background-color: var(--color-bg-secondary);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--color-border);
     box-shadow: 10px 10px #0002;
 }
 
@@ -96,9 +95,14 @@ body {
 /* ---------------------------------------------------------- */
 
 .gh-card {
-    padding: 20px 20px 0;
-    /*margin-bottom: 40px;*/
+    padding: 20px;
     overflow: hidden;
+}
+
+.gh-postfeed .gh-card {
+    display: grid;
+    grid-template-columns: 4fr 10fr;
+    gap:20px;
 }
 
 
@@ -108,16 +112,20 @@ body {
 }
 
 .gh-card-thumbnail {
-    height: 300px;
     max-height: inherit;
-    /*border-radius: 15px;*/
     display: block;
     position: relative;
     overflow: hidden;
-    /*margin: 20px 15px;*/
-    margin: -20px -20px 20px;
+    margin: -20px 0 -20px -20px;
 }
 
+.gh-postfeed .gh-card-thumbnail {
+    margin-right: 0;
+}
+
+.gh-article .gh-card-thumbnail {
+    height: 300px;
+}
 
 .gh-card-thumbnail .cover {
     position: absolute;
@@ -130,9 +138,6 @@ body {
     -webkit-transition: all 600ms ease;
     -o-transition: all 600ms ease;
     transition: all 600ms ease;
-    background-repeat: no-repeat !important;
-    background-position: center center;
-    background-size: cover !important;
     object-fit: cover;
 }
 
@@ -147,9 +152,11 @@ body {
     object-fit: cover;
     margin-bottom: 4vmin;
 }
-a.gh-card-title{
+
+a.gh-card-title {
     text-decoration: none;
 }
+
 .gh-card-thumbnail .gh-card-title, .gh-card-thumbnail .gh-card-meta {
     z-index: 100;
     position: absolute;
@@ -187,10 +194,15 @@ a.gh-card-title{
     margin: 0 auto;
     text-align: center;
     font-size: 1.6rem;
+    grid-column: 1/-1;
 }
 
-.gh-card-content > * {
-    margin: 20px 15px
+.gh-card-thumbnail + .gh-card-content {
+    grid-column: 2;
+}
+
+.gh-card-content > p {
+    margin-bottom: 20px;
 }
 
 .gh-card-content > strong {
@@ -200,16 +212,6 @@ a.gh-card-title{
     box-shadow: 0 -1px 0 0 inset currentColor;
     opacity: 0.5;
 }
-
-/*@media (min-width: 710px) {*/
-/*    .gh-card:first-child {*/
-/*        grid-column-start: 1;*/
-/*        grid-column-end: 3;*/
-/*    }*/
-/*    .gh-card:first-child .gh-card-thumbnail {*/
-/*        height: 375px;*/
-/*    }*/
-/*}*/
 
 
 /* Page
@@ -238,25 +240,6 @@ a.gh-card-title{
     opacity: 0.5;
     text-align: center;
 }
-
-@media (max-width: 700px) {
-    .gh-container.body {
-        grid-template-columns: 1fr;
-    }
-
-    .gh-card {
-        padding: 0;
-    }
-
-    .gh-card-thumbnail {
-        height: 180px;
-    }
-
-    .gh-page-head > p {
-        font-size: 1.6rem;
-    }
-}
-
 
 /* Post
 /* ---------------------------------------------------------- */
@@ -334,12 +317,6 @@ a.gh-card-title{
     transform: rotate(20deg);
 }
 
-@media (max-width: 700px) {
-    .gh-author-meta {
-        font-size: 1.6rem;
-    }
-}
-
 /**
     Article
  */
@@ -354,7 +331,38 @@ a.gh-card-title{
     border-bottom-right-radius: 0;
     margin: -8vmin -3vmin 3vmin;
 }
-.gh-article .gh-card .gh-card-thumbnail{
-    margin-bottom:0;
+
+.gh-article .gh-card .gh-card-thumbnail {
+    margin-bottom: 0;
 }
 
+
+@media (max-width: 700px) {
+    body{
+        background-size: cover;
+    }
+    .gh-container.body {
+        grid-template-columns: 1fr;
+    }
+
+    .gh-postfeed .gh-card {
+        display: block;
+    }
+
+    .gh-card-thumbnail {
+        height: 180px;
+        margin-bottom: 10px;
+    }
+
+    .gh-postfeed .gh-card-thumbnail {
+        margin-right: -20px;
+    }
+
+    .gh-page-head > p {
+        font-size: 1.6rem;
+    }
+
+    .gh-author-meta {
+        font-size: 1.6rem;
+    }
+}
