@@ -349,12 +349,12 @@ a.gh-card-title {
         display: block;
     }
 
-    .gh-card-thumbnail {
+    .gh-card-thumbnail,.gh-article .gh-card-thumbnail {
         height: 180px;
         margin-bottom: 10px;
     }
 
-    .gh-postfeed .gh-card-thumbnail {
+    .gh-postfeed .gh-card-thumbnail,.gh-article .gh-card-thumbnail {
         margin-right: -20px;
     }
 
