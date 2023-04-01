@@ -27,7 +27,8 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import "ghost/comments.css";
 
 /* Tocbot */
-@import "tocbot/dist/tocbot.css";
+/*@import "tocbot/src/scss/tocbot.scss";*/
+@import "components/tocbot.css";
 
 
 /* Main - Your styles here! Edit below

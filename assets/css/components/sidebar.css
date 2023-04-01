@@ -126,10 +126,3 @@
     top: 50px;
     z-index: 1000;
 }
-.gh-table-of-content .is-active-link:before {
-    background-color: var(--pink);
-}
-
-.gh-table-of-content .toc-list {
-    padding-left: 10px;
-}
