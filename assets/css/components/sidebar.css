@@ -15,12 +15,7 @@
 }
 
 .gh-sidebar .social {
-    background: var(--color-bg);
-    border-radius: 25px;
-    float: left;
-    padding: 3px 25px;
-    line-height: 16px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .gh-sidebar .social a {
