@@ -16,6 +16,7 @@ specifiers:
   rollup: ^3.18.0
   rollup-plugin-livereload: ^2.0.5
   rollup-plugin-postcss: ^4.0.2
+  tocbot: ^4.20.1
 
 devDependencies:
   '@babel/core': 7.21.3
@@ -33,6 +34,7 @@ devDependencies:
   rollup: 3.20.0
   rollup-plugin-livereload: 2.0.5
   rollup-plugin-postcss: 4.0.2_postcss@8.4.21
+  tocbot: 4.20.1
 
 packages:
 
@@ -5540,6 +5542,10 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+    dev: true
+
+  /tocbot/4.20.1:
+    resolution: {integrity: sha512-as1pH/qL0EL7zmMheK+EaMPPmvC9pzEpR98dA7z4DWemUdySi6Ipnk0WIc6AyQegQ7C2nNDuAL0WIo44poeEUg==}
     dev: true
 
   /toidentifier/1.0.1:

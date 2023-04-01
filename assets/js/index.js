@@ -6,6 +6,7 @@ import "../css/index.css";
 // Import JS
 import menuOpen from "./menuOpen";
 import initHighlight from "./Highlight.js";
+import initTocBot from "./tocbot.js";
 
 
 // import infiniteScroll from "./infiniteScroll";
@@ -17,3 +18,6 @@ menuOpen();
 
 // Highlight.js
 initHighlight();
+
+// Tocbot
+initTocBot();

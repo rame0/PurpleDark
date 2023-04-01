@@ -1,4 +1,11 @@
 <aside class="gh-sidebar">
+    {{#if post}}
+        <section class="table-of-content widget">
+            <h4>{{t "Table of contents"}}</h4>
+            <div class="gh-table-of-content toc">
+            </div>
+        </section>
+    {{/if}}
     {{#get "authors" limit=1 }}
         {{#foreach authors}}
 

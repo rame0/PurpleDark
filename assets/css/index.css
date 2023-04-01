@@ -26,6 +26,9 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import "ghost/pagination.css";
 @import "ghost/comments.css";
 
+/* Tocbot */
+@import "tocbot/dist/tocbot.css";
+
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
@@ -85,6 +88,7 @@ body {
     background-color: var(--color-bg-secondary);
     backdrop-filter: blur(20px);
     border: 1px solid var(--color-border);
+    box-shadow: 10px 10px #0002;
 }
 
 /* Index
@@ -145,7 +149,7 @@ body {
 a.gh-card-title{
     text-decoration: none;
 }
-.gh-card-thumbnail h2, .gh-card-thumbnail .gh-card-meta {
+.gh-card-thumbnail .gh-card-title, .gh-card-thumbnail .gh-card-meta {
     z-index: 100;
     position: absolute;
     left: 0;
@@ -155,7 +159,7 @@ a.gh-card-title{
     text-shadow: 1px 1px 2px var(--color-bg);
 }
 
-.gh-card-thumbnail h2 {
+.gh-card-thumbnail .gh-card-title {
     bottom: 0;
     text-align: center;
     padding: 10px 40px;
@@ -211,6 +215,7 @@ a.gh-card-title{
 /* ---------------------------------------------------------- */
 .gh-page {
     overflow: hidden;
+    padding-right: 10px;
 }
 
 .gh-page-head {
