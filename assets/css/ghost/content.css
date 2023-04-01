@@ -63,7 +63,7 @@
 .gh-canvas > dl,
 .gh-canvas > p {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.6em;
 }
 
@@ -102,7 +102,7 @@
     .gh-canvas ul,
     .gh-canvas dl,
     .gh-canvas p {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .gh-content blockquote::before {
@@ -138,7 +138,7 @@ figcaption strong {
 .gh-canvas :not(pre) code {
     vertical-align: middle;
     padding: 0.15em 0.4em 0.15em;
-    border: #e1eaef 1px solid;
+    border: var(--color-border) 1px solid;
     font-weight: 400 !important;
     font-size: 0.9em;
     line-height: 1em;

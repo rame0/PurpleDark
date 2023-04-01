@@ -21,11 +21,11 @@ body {
     /*color: #464646;*/
     color: color-mix(in srgb, var(--color-base) 80%, white);
     font-family: var(--font);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.6em;
     font-weight: 400;
     font-style: normal;
-    background: #fff;
+    background: var(--color-bg);
     scroll-behavior: smooth;
     /*-webkit-font-smoothing: antialiased;*/
     /*-moz-osx-font-smoothing: grayscale;*/
@@ -160,18 +160,18 @@ p {
 }
 
 h1 {
-    font-size: 4.6rem;
+    font-size: 4rem;
     letter-spacing: -0.5px;
 }
 
 @media (max-width: 500px) {
     h1 {
-        font-size: 2.7rem;
+        font-size: 2.4rem;
     }
 }
 
 h2 {
-    font-size: 3.6rem;
+    font-size: 3rem;
 }
 
 @media (max-width: 500px) {
@@ -181,25 +181,25 @@ h2 {
 }
 
 h3 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
 }
 
 @media (max-width: 500px) {
     h3 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 
 h4 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
 }
 
 h5 {
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 h6 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */

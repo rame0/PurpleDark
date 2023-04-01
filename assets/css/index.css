@@ -32,8 +32,9 @@ production stylesheet in assets/built/screen.css using: npm run dev
 
 body {
     background-size: 100% 100vh;
-    background: linear-gradient(180deg, #711542, #411640 50%) repeat-x fixed;
-    /*background: var(--color-bg) url("/assets/images/v3.jpg") repeat-x fixed bottom left;*/
+    /*background: linear-gradient(180deg, #711542, #411640 50%) repeat-x fixed;*/
+    background: var(--color-bg) url("/assets/images/bg.svg") repeat-x fixed bottom center;
+    background-size: contain;
 }
 
 .gh-no-grid{
