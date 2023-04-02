@@ -89,6 +89,7 @@ body {
     background-color: var(--color-bg-secondary);
     backdrop-filter: blur(20px);
     box-shadow: 10px 10px #0002;
+    overflow: hidden;
 }
 
 /* Index
@@ -102,7 +103,7 @@ body {
 .gh-postfeed .gh-card {
     display: grid;
     grid-template-columns: 4fr 10fr;
-    gap:20px;
+    gap: 20px;
 }
 
 
@@ -127,7 +128,7 @@ body {
     height: 300px;
 }
 
-.gh-card-thumbnail .cover {
+.cover {
     position: absolute;
     display: block;
     left: 0;
@@ -244,6 +245,15 @@ a.gh-card-title {
 /* Post
 /* ---------------------------------------------------------- */
 
+.gh-post-thumbnail {
+    height: 300px;
+    display: block;
+    margin: -3vmin -3vmin 2vmin;
+    max-height: inherit;
+    overflow: hidden;
+    position: relative;
+}
+
 .gh-header {
     padding: 0 0 8vmin 0;
     text-align: center;
@@ -322,7 +332,7 @@ a.gh-card-title {
  */
 
 .gh-article {
-    padding: 8vmin 3vmin;
+    padding: 3vmin;
 }
 
 .gh-article .gh-card {
@@ -338,9 +348,10 @@ a.gh-card-title {
 
 
 @media (max-width: 700px) {
-    body{
+    body {
         background-size: cover;
     }
+
     .gh-container.body {
         grid-template-columns: 1fr;
     }
@@ -349,12 +360,12 @@ a.gh-card-title {
         display: block;
     }
 
-    .gh-card-thumbnail,.gh-article .gh-card-thumbnail {
+    .gh-card-thumbnail, .gh-article .gh-card-thumbnail {
         height: 180px;
         margin-bottom: 10px;
     }
 
-    .gh-postfeed .gh-card-thumbnail,.gh-article .gh-card-thumbnail {
+    .gh-postfeed .gh-card-thumbnail, .gh-article .gh-card-thumbnail {
         margin-right: -20px;
     }
 
