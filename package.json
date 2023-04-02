@@ -36,9 +36,9 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/rame0/ghost-dark-theme.git"
+        "url": "https://github.com/rame0/PurpleDark.git"
     },
-    "bugs": "https://github.com/rame0/ghost-dark-theme/issues",
+    "bugs": "https://github.com/rame0/PurpleDark/issues",
     "contributors": [
         {
             "name": "Ghost Foundation",
