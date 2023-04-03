@@ -84,7 +84,7 @@ body {
     grid-template-columns: 5fr 2fr;
 }
 
-.gh-article, .gh-card {
+.gh-article, .gh-card, .gh-footer {
     border-radius: 15px;
     background-color: var(--color-bg-secondary);
     backdrop-filter: blur(20px);

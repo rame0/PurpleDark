@@ -42,18 +42,19 @@
             {{tags prefix=(t "Tags: ")}}
         </p>
 
-        <footer class="gh-footer gh-canvas">
-
-
-            {{#if comments}}
-                <section class="gh-post-comments">
-                    {{comments}}
-                </section>
-            {{/if}}
-
-        </footer>
-
     </article>
+
+    <footer class="gh-footer gh-canvas">
+        {{#if comments}}
+            <section class="gh-post-comments">
+                <h2>
+                    {{t "Комментарии"}}
+                    <small>({{comment_count singular="" plural="" empty="0"}})</small>
+                </h2>
+                {{comments mode="dark" count=false title="" }}
+            </section>
+        {{/if}}
+    </footer>
 
     <aside class="gh-readmore">
         <div class="gh-readmore-inner gh-container">
