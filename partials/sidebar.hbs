@@ -33,13 +33,19 @@
                         {{#if twitter}}
                             <a href="https://twitter.com/{{twitter}}" target="_blank"
                                rel="nofollow noopener" title="{{t "Subscribe in"}} Twitter">
-                                {{> "icons/twitter"}}
+                                {{> "icons/icons8-twitter"}}
                             </a>
                         {{/if}}
-                        <a href="https://t.me/rame0ru" target="_blank"
-                           rel="nofollow noopener" title="{{t "Contact via"}} Telegram">
-                            {{> "icons/telegram"}}
-                        </a>
+                        {{#if facebook}}
+                            <a href="{{facebook}}" target="_blank" rel="nofollow noopener"
+                               title="{{t "Facebook"}}: {{facebook}}">
+                                {{> "icons/icons8-facebook"}}
+                            </a>
+                        {{/if}}
+<!--                        <a href="https://t.me/rame0ru" target="_blank"-->
+<!--                           rel="nofollow noopener" title="{{t "Contact via"}} Telegram">-->
+<!--                            {{> "icons/icons8-telegram"}}-->
+<!--                        </a>-->
                     </div>
                 </div>
                 <p>{{bio}}</p>

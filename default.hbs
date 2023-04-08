@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-{{#match @custom.font "monospace"}}<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">{{/match}}
-{{#match @custom.font "sans-serif"}}<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">{{/match}}
-{{#match @custom.font "serif"}}<link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;700&display=swap" rel="stylesheet">{{/match}}
+    {{#match @custom.font "monospace"}}
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+            rel="stylesheet">
+    {{/match}}
+    {{#match @custom.font "sans-serif"}}
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+            rel="stylesheet">
+    {{/match}}
+    {{#match @custom.font "serif"}}
+        <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;700&display=swap"
+              rel="stylesheet">
+    {{/match}}
 
     <link rel="stylesheet" href="{{asset "built/index.css"}}"/>
-    <script src="{{asset "built/index.js"}}" defer></script>
 
     <title>{{meta_title}}</title>
     {{ghost_head}}
@@ -29,6 +39,7 @@
             {{#match @custom.layout "960px"}}--container-width: 960px;{{/match}}
         }
     </style>
+    <script src="{{asset "built/index.js"}}" defer></script>
 </head>
 <body class="{{body_class}}">
 <div class="gh-viewport">
@@ -81,9 +92,12 @@
                 {{navigation type="secondary"}}
             </div>
             <div class="gh-foot-meta">
-                {{t "Designed by"}} <a href="https://rame0.ru">RAMe0</a><br/>
+                {{t "Designed by"}}
+                <a href="https://rame0.ru">RAMe0</a>
+                <br/>
                 {{t "Published with"}}
                 <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                | {{t "Some icons by"}} <a target="_blank" href="https://icons8.com">Icons8</a>
             </div>
         </div>
     </footer>

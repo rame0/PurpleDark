@@ -7,6 +7,7 @@ import "../css/index.css";
 import menuOpen from "./menuOpen";
 import initHighlight from "./Highlight.js";
 import initTocBot from "./tocbot.js";
+import initSocialLinks from "./initSocialLinks.js";
 
 
 // import infiniteScroll from "./infiniteScroll";
@@ -21,3 +22,6 @@ initHighlight();
 
 // Tocbot
 initTocBot();
+
+// Sidebar author social links
+initSocialLinks();
