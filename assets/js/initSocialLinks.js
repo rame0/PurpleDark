@@ -20,7 +20,9 @@ export default function initSocialLinks() {
         socialLinkElement.target = '_blank';
         socialLinkElement.rel = 'noopener noreferrer';
         socialLinkElement.title = socialLink.title;
-        socialLinkElement.classList.add(socialLink.class);
+        if (socialLink.class) {
+            socialLinkElement.classList.add(socialLink.class);
+        }
 
         socialLinksContainer.appendChild(socialLinkElement);
     });
