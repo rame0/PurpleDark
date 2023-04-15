@@ -41,6 +41,7 @@ To add custom links go to `Settings` -> `Code Injection` -> `Site Header` and ad
 </script>
 ```
 
+
 #### Social links options
 
 - `href` - link url
@@ -51,7 +52,25 @@ To add custom links go to `Settings` -> `Code Injection` -> `Site Header` and ad
     - `title` - link title
     - `class` - additional class for link
 
+
+## TocBot
+Generate a table of contents based on the heading structure of a html document.
+
+It will appear on top of the sidebar. And will stick to the top of the screen when scrolling.
+
+You can change TocBot by adding this code to `Settings` -> `Code Injection` -> `Site Header`:
+
+Full list of options: https://tscanlin.github.io/tocbot/#api
+
 ```html
+<script>
+    var TOC_BOT_OPTIONS = {
+        collapseDepth: 0,
+    }
+</script>
+```
+
+
 
 ## Theme structure
 
@@ -63,12 +82,20 @@ The main files are:
 - [`page.hbs`](page.hbs) - Used for individual pages
 - [`tag.hbs`](tag.hbs) - Used for tag archives
 - [`author.hbs`](author.hbs) - Used for author archives
+- [`error.hbs`](error.hbs) - Used for error pages
 
 One neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
 
 - `page-about.hbs` - Custom template for the `/about/` page
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
 - `author-jamie.hbs` - Custom template for `/author/jamie/` archive
+
+### Partials
+- [`partials/card.hbs`](partials/card.hbs) - Post card for index page
+- [`partials/sidebar.hbs`](partials/sidebar.hbs) - Sidebar
+- [`partials/card-short.hbs`](partials/card-short.hbs) - Post card for sidebar
+- [`partials/pagination.hbs`](partials/pagination.hbs) - Pagination
+- [`partials/icons/<icon_name>.svg`](partials/icons) - SVG-icons used in theme
 
 &nbsp;
 
