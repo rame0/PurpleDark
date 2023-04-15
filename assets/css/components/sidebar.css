@@ -19,9 +19,15 @@
 }
 
 .gh-sidebar .social a {
-    display: inline-block;
+    display: block;
+    float: left;
+    margin-right: 10px;
     width: 30px;
     height: 30px;
+}
+
+.gh-sidebar .social a:last-child {
+    margin-right: 0;
 }
 
 .gh-sidebar .social a svg {
@@ -121,14 +127,14 @@
     padding: 3px 25px;
 }
 
-.widget.table-of-content{
+.widget.table-of-content {
     position: sticky;
     top: 50px;
     z-index: 1000;
 }
 
 @media (max-width: 700px) {
-    .widget.table-of-content{
+    .widget.table-of-content {
         position: relative;
         top: 0;
     }
