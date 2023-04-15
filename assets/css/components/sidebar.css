@@ -128,6 +128,7 @@
 }
 
 .widget.table-of-content {
+    display: none;
     position: sticky;
     top: 50px;
     z-index: 1000;

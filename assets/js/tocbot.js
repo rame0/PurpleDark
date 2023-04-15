@@ -1,7 +1,7 @@
 import tocbot from "tocbot";
 
 export default function initTocBot() {
-    tocbot.init({
+    const options = {
         // Where to render the table of contents.
         tocSelector: '.gh-table-of-content',
         // Where to grab the headings to build the table of contents.
@@ -12,6 +12,8 @@ export default function initTocBot() {
         hasInnerContainers: false,
         // Headings offset between the headings and the top of the document (this is meant for minor adjustments).
         scrollSmoothOffset: -50,
+        // Collapse depth of the table of contents.
+        collapseDepth: 3,
         // Optional callback to change heading labels.
         headingObjectCallback: (x, y) => {
 
@@ -24,5 +26,19 @@ export default function initTocBot() {
             y.id = x.id;
             return x
         }
-    });
+    };
+
+    if(window.TOC_BOT_OPTIONS) {
+        Object.assign(options, window.TOC_BOT_OPTIONS);
+    }
+
+    tocbot.init(options);
+
+    console.log(tocbot)
+    const elements = document.querySelector(".gh-table-of-content li");
+    console.log(elements)
+
+    if (elements) {
+        document.querySelector(".widget.table-of-content").classList.add("show");
+    }
 }

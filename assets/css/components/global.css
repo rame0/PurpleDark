@@ -215,3 +215,11 @@ h6 {
 .no-shadow {
     box-shadow: none !important;
 }
+
+.show {
+    display: block!important;
+}
+
+.hide {
+    display: none!important;
+}
