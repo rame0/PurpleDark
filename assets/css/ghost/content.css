@@ -1,5 +1,3 @@
-
-
 /* Content grid
 /* ---------------------------------------------------------- */
 
@@ -30,6 +28,8 @@
 
 .kg-width-full {
     grid-column: full-start / full-end;
+    margin-left: -3vmin;
+    margin-right: -3vmin;
 }
 
 .kg-width-full img {
@@ -123,16 +123,17 @@
 }
 
 figcaption {
-    padding: 1.5rem 1.5rem 0;
+    padding: 1.5rem 1.5rem 1rem;
     text-align: center;
-    color: rgba(0,0,0,0.5);
+    color: var(--color-primary);
     font-weight: 600;
     font-size: 1.3rem;
     line-height: 1.4em;
+    background-color: var(--color-bg-secondary);
 }
 
 figcaption strong {
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .gh-canvas :not(pre) code {
@@ -147,12 +148,12 @@ figcaption strong {
     border-radius: 0.25em;
 }
 
-.gh-canvas > pre > code{
+.gh-canvas > pre > code {
     /*overflow: scroll;*/
     /*padding: 16px 20px;*/
     /*background: rgba(255,255,255,0.8);*/
     border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
 }
 
 .kg-embed-card {
@@ -215,19 +216,21 @@ figcaption strong {
     position: relative;
 }
 
-.kg-bookmark-container,
-.kg-bookmark-container:hover {
+.kg-bookmark-container{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
     color: currentColor;
-    background: rgba(255,255,255,0.6);
+    background: var(--color-comment);
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
     overflow: hidden;
 }
 
+.kg-bookmark-container:hover {
+    background: var(--color-bg-secondary);
+}
 .kg-bookmark-content {
     flex-basis: 0;
     flex-grow: 999;
@@ -318,6 +321,7 @@ figcaption strong {
 .kg-width-wide.kg-card-hascaption img {
     grid-column: wide-start / wide-end;
 }
+
 .kg-width-full.kg-card-hascaption img {
     grid-column: 1 / -1;
 }
@@ -347,20 +351,19 @@ figcaption strong {
 }
 
 .gh-content tbody tr:nth-child(2n + 1) {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 1px;
 }
 
 .gh-content tbody tr:nth-child(2n + 2) td:last-child {
-    box-shadow:
-        inset 1px 0 rgba(0,0,0,0.1),
-        inset 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1),
+    inset 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .gh-content tbody tr:nth-child(2n + 2) td {
-    box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .gh-content tbody tr:last-child {
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
