@@ -1,7 +1,7 @@
 {
     "name": "purple-dark",
     "description": "Dark purple theme for Ghost. With some dracula colors.",
-    "version": "0.5.2",
+    "version": "0.5.3",
     "engines": {
         "ghost": ">=5.0.0"
     },
